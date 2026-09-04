@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abhishek Yadav | VLSI Design & RTL Engineer Portfolio</title>
+  <meta name="description" content="Portfolio of Abhishek Yadav - Aspiring VLSI Design Engineer & ECE Undergraduate specializing in Verilog HDL, RTL Design, Simulation, and Hardware Synthesis.">
+  <meta name="keywords" content="Abhishek Yadav, VLSI, RTL Design, Verilog HDL, Digital Electronics, Xilinx Vivado, GTKWave, ECE, ASIC, FPGA">
+  <meta name="author" content="Abhishek Yadav">
+
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Abhishek Yadav | VLSI Design & RTL Engineer Portfolio">
+  <meta property="og:description" content="ECE Undergraduate specializing in Verilog HDL, RTL Synthesis, and Digital Circuit Design.">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- Background Cursor Spotlight Effect -->
+  <div class="cursor-spotlight"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="#hero" class="logo-link">
+        <span class="logo-chip">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <rect x="9" y="9" width="6" height="6" />
+            <line x1="9" y1="1" x2="9" y2="4" />
+            <line x1="15" y1="1" x2="15" y2="4" />
+            <line x1="9" y1="20" x2="9" y2="23" />
+            <line x1="15" y1="20" x2="15" y2="23" />
+            <line x1="20" y1="9" x2="23" y2="9" />
+            <line x1="20" y1="14" x2="23" y2="14" />
+            <line x1="1" y1="9" x2="4" y2="9" />
+            <line x1="1" y1="14" x2="4" y2="14" />
+          </svg>
+        </span>
+        <span>AY<span class="logo-text-highlight">.VLSI</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="nav-desktop">
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#alu-demo" class="nav-link">ALU Demo</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#education" class="nav-link">Education</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>Open to VLSI / RTL Roles</span>
+        </div>
+        <a href="#contact" class="btn btn-primary btn-sm">Get in Touch</a>
+        <!-- Mobile menu toggle -->
+        <button class="mobile-menu-btn" aria-label="Toggle Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="nav-mobile-drawer">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#skills" class="nav-link">Skills & Tools</a>
+    <a href="#alu-demo" class="nav-link">Interactive ALU</a>
+    <a href="#projects" class="nav-link">Projects</a>
+    <a href="#education" class="nav-link">Education & Accolades</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <div style="margin-top: auto;">
+      <a href="#contact" class="btn btn-primary" style="width: 100%;">Get in Touch</a>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="section" style="padding-top: calc(var(--header-height) + 60px); min-height: 90vh; display: flex; align-items: center;">
+    <div class="container">
+      <div class="bento-grid">
+        <div class="col-8">
+          <div class="hero-content">
+            <div class="hero-role-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"></circle>
+                <line x1="12" y1="8" x2="12" y2="12"></line>
+                <line x1="12" y1="16" x2="12.01" y2="16"></line>
+              </svg>
+              <span>Aspiring VLSI Design & RTL Engineer</span>
+            </div>
+
+            <h1 class="hero-title">
+              Hi, I'm <span class="text-gradient">Abhishek Yadav</span>.<br>
+              Architecting Silicon Logic & RTL Systems.
+            </h1>
+
+            <p class="hero-desc">
+              ECE Undergraduate passionate about hardware description languages, synthesizable digital design, and chip architecture. Experienced in Verilog HDL, RTL verification, simulation with GTKWave, and hardware synthesis using Xilinx Vivado.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#alu-demo" class="btn btn-primary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                </svg>
+                Launch ALU Simulator
+              </a>
+              <a href="https://github.com/abhishek144-alt" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                </svg>
+                GitHub Profile
+              </a>
+              <a href="https://linkedin.com/in/abhishek-yadav-1088ba296" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                </svg>
+                LinkedIn
+              </a>
+            </div>
+
+            <div class="hero-stats-row">
+              <div class="stat-item">
+                <div class="stat-value">8.03<span class="stat-unit">/10</span></div>
+                <div class="stat-label">B.Tech CGPA (AKTU)</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">9<span class="stat-unit">Ops</span></div>
+                <div class="stat-label">Synthesizable 8-Bit ALU</div>
+              </div>
+              <div class="stat-item">
+                <div class="stat-value">0<span class="stat-unit">Timing Violations</span></div>
+                <div class="stat-label">Vivado Synthesis</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Silicon Circuit Graphic / Code Terminal -->
+        <div class="col-4">
+          <div class="card-glass" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between; border-color: rgba(0, 242, 254, 0.25);">
+            <div>
+              <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; border-bottom: 1px solid var(--border-subtle); padding-bottom: 12px;">
+                <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan);">alu_8bit.v — RTL Source</span>
+                <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: #10b981; box-shadow: 0 0 8px #10b981;"></span>
+              </div>
+              <pre style="font-family: var(--font-mono); font-size: 0.78rem; line-height: 1.6; color: var(--text-secondary); overflow-x: auto; background: #05070a; padding: 14px; border-radius: var(--radius-sm); border: 1px solid var(--border-subtle);">
+<span style="color: #f43f5e;">module</span> <span style="color: #38bdf8;">alu_8bit</span> (
+  <span style="color: #f43f5e;">input</span>  [7:0] A, B,
+  <span style="color: #f43f5e;">input</span>  [3:0] ALU_Sel,
+  <span style="color: #f43f5e;">output</span> <span style="color: #f43f5e;">reg</span> [7:0] ALU_Out,
+  <span style="color: #f43f5e;">output</span> Carry, Zero,
+  <span style="color: #f43f5e;">output</span> Overflow, Negative
+);
+<span style="color: #64748b;">// 9-Op Synthesizable Core</span>
+<span style="color: #f43f5e;">always</span> @(*) <span style="color: #f43f5e;">begin</span>
+  <span style="color: #f43f5e;">case</span> (ALU_Sel)
+    4'b0000: ALU_Out = A + B;
+    4'b0001: ALU_Out = A - B;
+    4'b0010: ALU_Out = A &amp; B;
+    4'b0011: ALU_Out = A | B;
+    4'b0100: ALU_Out = A ^ B;
+    <span style="color: #64748b;">/* full op decoder */</span>
+  <span style="color: #f43f5e;">endcase</span>
+<span style="color: #f43f5e;">end</span>
+<span style="color: #f43f5e;">endmodule</span></pre>
+            </div>
+
+            <div style="margin-top: 20px; padding: 14px; background: rgba(0, 242, 254, 0.05); border: 1px solid rgba(0, 242, 254, 0.2); border-radius: var(--radius-sm);">
+              <div style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--accent-cyan); font-weight: 600; margin-bottom: 4px;">Target Engineering Domains:</div>
+              <div style="font-size: 0.85rem; color: var(--text-secondary);">RTL Design • Digital Verification • ASIC / FPGA Frontend • Logic Synthesis</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="section" style="background: rgba(10, 14, 23, 0.5);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+          Profile
+        </div>
+        <h2 class="section-title">Engineering Background</h2>
+        <p class="section-subtitle">Bridging theoretical digital design concepts with synthesizable RTL hardware modeling.</p>
+      </div>
+
+      <div class="bento-grid">
+        <div class="col-7">
+          <div class="card-glass" style="height: 100%;">
+            <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">Professional Summary</h3>
+            <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 20px;">
+              I am a motivated Electronics and Communication Engineering undergraduate at <strong>Raj Kumar Goel Institute of Technology (AKTU)</strong> with a strong foundation in VLSI design, digital electronics, RTL coding, and hardware description languages.
+            </p>
+            <p style="color: var(--text-secondary); line-height: 1.8; margin-bottom: 24px;">
+              My technical expertise spans <strong>Verilog HDL</strong>, combinational & sequential circuit design, RTL simulation, and synthesis using industry-standard tools. I am actively seeking roles as an <strong>Aspiring VLSI Design Engineer / RTL Engineer</strong> where I can contribute to real-world semiconductor chip design projects through rigorous hands-on problem solving and technical mentorship.
+            </p>
+
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; padding-top: 18px; border-top: 1px solid var(--border-subtle);">
+              <div>
+                <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Location</span>
+                <p style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary);">Ghaziabad, India</p>
+              </div>
+              <div>
+                <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Primary Discipline</span>
+                <p style="font-size: 0.95rem; font-weight: 600; color: var(--text-primary);">Electronics & Communication</p>
+              </div>
+              <div>
+                <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Academic Standing</span>
+                <p style="font-size: 0.95rem; font-weight: 600; color: #34d399;">CGPA: 8.03 (up to 6th Sem)</p>
+              </div>
+              <div>
+                <span style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">Hardware Specialty</span>
+                <p style="font-size: 0.95rem; font-weight: 600; color: var(--accent-cyan);">RTL Synthesis & Verilog HDL</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-5">
+          <div class="card-glass" style="height: 100%; display: flex; flex-direction: column; justify-content: space-between;">
+            <div>
+              <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 16px; color: var(--text-primary);">Core Competencies</h3>
+              <div style="display: flex; flex-direction: column; gap: 14px;">
+                <div style="padding: 12px 16px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+                  <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 0.95rem; margin-bottom: 4px;">
+                    <span>RTL Modeling & Synthesizability</span>
+                    <span style="color: var(--accent-cyan); font-family: var(--font-mono);">Verilog</span>
+                  </div>
+                  <p style="font-size: 0.85rem; color: var(--text-muted);">Writing clean, clock-domain aware RTL with zero timing violations on FPGA/ASIC targets.</p>
+                </div>
+
+                <div style="padding: 12px 16px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+                  <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 0.95rem; margin-bottom: 4px;">
+                    <span>Simulation & Waveform Debug</span>
+                    <span style="color: var(--accent-cyan); font-family: var(--font-mono);">GTKWave</span>
+                  </div>
+                  <p style="font-size: 0.85rem; color: var(--text-muted);">Self-checking testbench architectures, timing assertion verification, and signal inspection.</p>
+                </div>
+
+                <div style="padding: 12px 16px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); border-radius: var(--radius-md);">
+                  <div style="display: flex; justify-content: space-between; font-weight: 600; font-size: 0.95rem; margin-bottom: 4px;">
+                    <span>Hardware Prototyping</span>
+                    <span style="color: var(--accent-cyan); font-family: var(--font-mono);">Embedded</span>
+                  </div>
+                  <p style="font-size: 0.85rem; color: var(--text-muted);">Sensor interfacing, combinational control logic mapping, and Bluetooth telemetry.</p>
+                </div>
+              </div>
+            </div>
+
+            <div style="margin-top: 20px;">
+              <a href="#contact" class="btn btn-secondary" style="width: 100%;">
+                Request Full CV / Connect Directly
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Matrix Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+          Technical Repertoire
+        </div>
+        <h2 class="section-title">Skills & Toolchain</h2>
+        <p class="section-subtitle">Categorized breakdown of hardware description languages, EDA design suites, and foundational digital engineering concepts.</p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- HDL & Programming -->
+        <div class="col-6">
+          <div class="card-glass card-interactive">
+            <h3 class="skill-category-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+              HDL & Hardware Programming
+            </h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 18px;">
+              Writing behavioral, dataflow, and structural hardware descriptions with strict synthesizability and deterministic timing.
+            </p>
+            <div class="tech-tags-wrapper">
+              <span class="tech-tag tech-tag-highlight">Verilog HDL</span>
+              <span class="tech-tag">RTL Modeling</span>
+              <span class="tech-tag">Self-Checking Testbenches</span>
+              <span class="tech-tag">Finite State Machines (FSM)</span>
+              <span class="tech-tag">C / C++ Basics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- VLSI & Digital Design -->
+        <div class="col-6">
+          <div class="card-glass card-interactive">
+            <h3 class="skill-category-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"></rect><rect x="9" y="9" width="6" height="6"></rect></svg>
+              VLSI & Digital Circuit Design
+            </h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 18px;">
+              Core architectural knowledge in silicon micro-architecture, CMOS circuit theory, and combinational/sequential logic blocks.
+            </p>
+            <div class="tech-tags-wrapper">
+              <span class="tech-tag tech-tag-highlight">RTL Design</span>
+              <span class="tech-tag">CMOS (Basics)</span>
+              <span class="tech-tag">Combinational Logic</span>
+              <span class="tech-tag">Sequential Circuit Design</span>
+              <span class="tech-tag">Logic Synthesis</span>
+              <span class="tech-tag">Timing Constraints</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- EDA Tools & Platforms -->
+        <div class="col-8">
+          <div class="card-glass card-interactive">
+            <h3 class="skill-category-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>
+              EDA Tools & Simulation Platforms
+            </h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 18px;">
+              Hands-on experience in leading electronic design automation environments for synthesis, verification, and logic analysis.
+            </p>
+            <div class="tech-tags-wrapper">
+              <span class="tech-tag tech-tag-highlight">Xilinx Vivado</span>
+              <span class="tech-tag tech-tag-highlight">Icarus Verilog</span>
+              <span class="tech-tag tech-tag-highlight">GTKWave</span>
+              <span class="tech-tag">EDA Playground</span>
+              <span class="tech-tag">GitHub / Git</span>
+              <span class="tech-tag">VS Code</span>
+              <span class="tech-tag">Arduino IDE</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Core Domain & Soft Skills -->
+        <div class="col-4">
+          <div class="card-glass card-interactive">
+            <h3 class="skill-category-title">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+              Core Domains & Soft Skills
+            </h3>
+            <p style="font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 18px;">
+              Systematic engineering approach, collaborative mindset, and precision.
+            </p>
+            <div class="tech-tags-wrapper">
+              <span class="tech-tag">Digital Electronics</span>
+              <span class="tech-tag">VLSI Design Flow</span>
+              <span class="tech-tag">Problem Solving</span>
+              <span class="tech-tag">Attention to Detail</span>
+              <span class="tech-tag">Team Collaboration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive 8-Bit ALU Visualizer Demo Section -->
+  <section id="alu-demo" class="section" style="background: rgba(8, 12, 20, 0.75);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+          Live RTL Simulation
+        </div>
+        <h2 class="section-title">Interactive 8-Bit ALU Visualizer</h2>
+        <p class="section-subtitle">Experience the logic of my synthesizable 8-bit Verilog ALU project in real time. Select an operation, adjust inputs, and inspect hardware status flags.</p>
+      </div>
+
+      <div class="alu-simulator-card">
+        <div class="alu-header">
+          <div class="alu-chip-tag">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="4" y="4" width="16" height="16" rx="2" />
+              <rect x="9" y="9" width="6" height="6" />
+            </svg>
+            <span>AY-ALU-808 // VERILOG_RTL_EMULATION</span>
+          </div>
+          <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--text-muted);">
+            Precision: 8-Bit Unsigned / 2's Complement
+          </div>
+        </div>
+
+        <!-- ALU Input Controls -->
+        <div class="alu-controls-grid">
+          <div class="alu-input-group">
+            <label for="alu-operand-a">
+              <span>OPERAND A [7:0]</span>
+              <span style="color: var(--accent-cyan);">Decimal (0-255)</span>
+            </label>
+            <input type="number" id="alu-operand-a" class="alu-input-field" min="0" max="255" value="142">
+          </div>
+
+          <div class="alu-input-group">
+            <label for="alu-operand-b">
+              <span>OPERAND B [7:0]</span>
+              <span style="color: var(--accent-cyan);">Decimal (0-255)</span>
+            </label>
+            <input type="number" id="alu-operand-b" class="alu-input-field" min="0" max="255" value="35">
+          </div>
+        </div>
+
+        <!-- Opcode Selector -->
+        <div>
+          <label style="display: block; font-family: var(--font-mono); font-size: 0.82rem; color: var(--text-secondary); margin-bottom: 10px;">
+            SELECT ALU OPERATION [3:0] (9 SUPPORTED OPERATIONS):
+          </label>
+          <div class="alu-op-buttons">
+            <button class="alu-op-btn active" data-op="ADD">ADD (A + B)</button>
+            <button class="alu-op-btn" data-op="SUB">SUB (A - B)</button>
+            <button class="alu-op-btn" data-op="AND">AND (A &amp; B)</button>
+            <button class="alu-op-btn" data-op="OR">OR (A | B)</button>
+            <button class="alu-op-btn" data-op="XOR">XOR (A ^ B)</button>
+            <button class="alu-op-btn" data-op="NAND">NAND ~(A &amp; B)</button>
+            <button class="alu-op-btn" data-op="NOR">NOR ~(A | B)</button>
+            <button class="alu-op-btn" data-op="SHL">SHL (A &lt;&lt; 1)</button>
+            <button class="alu-op-btn" data-op="SHR">SHR (A &gt;&gt; 1)</button>
+          </div>
+        </div>
+
+        <!-- Hardware Output & Flag Screen -->
+        <div class="alu-display-screen">
+          <div class="alu-result-row">
+            <div>
+              <span style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">
+                ALU_OUT [7:0] Binary Bus
+              </span>
+              <div id="alu-res-bin" class="alu-result-bits">8'b1011_0001</div>
+            </div>
+            <div style="display: flex; gap: 24px;">
+              <div>
+                <span style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">
+                  HEX
+                </span>
+                <div id="alu-res-hex" style="font-family: var(--font-mono); font-size: 1.3rem; font-weight: 700; color: #fff;">0xB1</div>
+              </div>
+              <div>
+                <span style="display: block; font-family: var(--font-mono); font-size: 0.78rem; color: var(--text-muted); text-transform: uppercase;">
+                  DEC
+                </span>
+                <div id="alu-res-dec" style="font-family: var(--font-mono); font-size: 1.3rem; font-weight: 700; color: #fff;">177</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Hardware Status Flags Register -->
+          <div class="alu-flags-row">
+            <div class="alu-flag-item">
+              <span id="flag-carry" class="flag-indicator"></span>
+              <span><strong>Carry (C):</strong> <small style="color: var(--text-muted);">Arithmetic Carry / Borrow</small></span>
+            </div>
+            <div class="alu-flag-item">
+              <span id="flag-zero" class="flag-indicator"></span>
+              <span><strong>Zero (Z):</strong> <small style="color: var(--text-muted);">Result == 0x00</small></span>
+            </div>
+            <div class="alu-flag-item">
+              <span id="flag-overflow" class="flag-indicator"></span>
+              <span><strong>Overflow (V):</strong> <small style="color: var(--text-muted);">Signed 2's Complement</small></span>
+            </div>
+            <div class="alu-flag-item">
+              <span id="flag-negative" class="flag-indicator"></span>
+              <span><strong>Negative (N):</strong> <small style="color: var(--text-muted);">MSB == 1</small></span>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 20px; font-size: 0.85rem; color: var(--text-secondary); display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px;">
+          <span>⚡ Simulated module directly reflects synthesizable Verilog code verified in GTKWave &amp; Vivado.</span>
+          <a href="#project-alu" style="color: var(--accent-cyan); font-family: var(--font-mono); font-size: 0.8rem; text-decoration: underline;">Read Full Project Spec ▹</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Projects Section -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+          Featured Work
+        </div>
+        <h2 class="section-title">Engineering Projects</h2>
+        <p class="section-subtitle">Real-world implementations in digital logic synthesis, hardware description, and embedded assistive technology.</p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Project 1: 8-Bit ALU -->
+        <div class="col-6" id="project-alu">
+          <div class="card-glass project-card card-interactive">
+            <div class="project-card-header">
+              <span class="project-category">RTL Design &amp; Verification</span>
+              <span class="project-year">2026</span>
+            </div>
+            <h3 class="project-title">8-Bit ALU — RTL Design &amp; Verification (Verilog)</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+              Synthesizable 8-bit Arithmetic Logic Unit (ALU) core engineered in Verilog HDL, supporting arithmetic, logic, and bit-shift computations with full hardware condition flags.
+            </p>
+
+            <ul class="project-desc-list">
+              <li>Designed and verified a synthesizable 8-bit Arithmetic Logic Unit (ALU) in Verilog supporting 9 operations — ADD, SUB, AND, OR, XOR, NAND, NOR, and logical left/right shift.</li>
+              <li>Implemented four dedicated status flags — Carry, Zero, Overflow, and Negative — to accurately reflect ALU operation results at the hardware register level.</li>
+              <li>Independently wrote the RTL module and a self-checking testbench; simulated the complete design using Icarus Verilog and inspected signal waveforms in GTKWave.</li>
+              <li>Synthesized the design in Xilinx Vivado, verifying clean mapping to target hardware with zero timing violations.</li>
+            </ul>
+
+            <div class="project-tools-footer">
+              <span class="tech-tag tech-tag-highlight">Verilog HDL</span>
+              <span class="tech-tag">Xilinx Vivado</span>
+              <span class="tech-tag">Icarus Verilog</span>
+              <span class="tech-tag">GTKWave</span>
+              <span class="tech-tag">VS Code</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Hand Gesture Gloves -->
+        <div class="col-6">
+          <div class="card-glass project-card card-interactive">
+            <div class="project-card-header">
+              <span class="project-category">Embedded Systems &amp; Digital Logic</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3 class="project-title">Hand Gesture Recognition Gloves</h3>
+            <p style="font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6;">
+              Hardware-based assistive communication wearable for speech-impaired individuals, detecting hand gestures via multi-sensor fusion and wireless telemetry.
+            </p>
+
+            <ul class="project-desc-list">
+              <li>Designed a hardware-based assistive glove enabling communication for speech-impaired individuals by detecting and interpreting hand gestures using combinational logic principles.</li>
+              <li>Integrated Flex Sensors and MPU-6050 Gyroscope for static finger flexion and dynamic positional gesture sensing.</li>
+              <li>Transmitted telemetry wirelessly via HC-05 Bluetooth module to a dedicated mobile Text-To-Speech (TTS) application for real-time audible speech output.</li>
+              <li>Implemented and simulated digital logic for gesture-to-output mapping; identified challenges in dynamic gesture recognition targeted for future enhancement.</li>
+            </ul>
+
+            <div class="project-tools-footer">
+              <span class="tech-tag tech-tag-highlight">Arduino UNO</span>
+              <span class="tech-tag">Flex Sensors</span>
+              <span class="tech-tag">MPU-6050 Gyroscope</span>
+              <span class="tech-tag">HC-05 Bluetooth</span>
+              <span class="tech-tag">Arduino IDE</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education, Certifications & Achievements Section -->
+  <section id="education" class="section" style="background: rgba(10, 14, 23, 0.5);">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+          Academic Trajectory
+        </div>
+        <h2 class="section-title">Education &amp; Credentials</h2>
+        <p class="section-subtitle">Academic foundations, accredited certifications, and exhibition achievements.</p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Education Timeline -->
+        <div class="col-7">
+          <div class="card-glass" style="height: 100%;">
+            <h3 style="font-size: 1.35rem; font-weight: 700; margin-bottom: 24px; color: var(--text-primary); display: flex; align-items: center; gap: 10px;">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+              Academic Background
+            </h3>
+
+            <div class="timeline">
+              <!-- B.Tech -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2023 – 2027 (Expected)</div>
+                <h4 class="timeline-title">B.Tech — Electronics &amp; Communication Engineering</h4>
+                <div class="timeline-subtitle">Raj Kumar Goel Institute of Technology, Ghaziabad | AKTU</div>
+                <div class="timeline-meta">CGPA: 8.03 (up to 6th Semester)</div>
+              </div>
+
+              <!-- Class XII -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2022</div>
+                <h4 class="timeline-title">Intermediate (Class XII)</h4>
+                <div class="timeline-subtitle">MG Inter College, Gorakhpur | UP Board</div>
+                <div class="timeline-meta">Percentage: 75%</div>
+              </div>
+
+              <!-- Class X -->
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2020</div>
+                <h4 class="timeline-title">High School (Class X)</h4>
+                <div class="timeline-subtitle">St. Anthony's Convent School, Gorakhpur | CBSE Board</div>
+                <div class="timeline-meta">Percentage: 79%</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certifications & Achievements -->
+        <div class="col-5">
+          <div style="display: flex; flex-direction: column; gap: 24px; height: 100%;">
+            <!-- NPTEL Certification -->
+            <div class="card-glass card-interactive" style="flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+                <span class="project-category">Certification</span>
+                <span class="project-year">2025</span>
+              </div>
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">
+                Digital Circuits — NPTEL
+              </h3>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+                Advanced academic coursework certification covering Boolean algebra, logic minimization, synchronous sequential machines, timing hazards, and digital logic synthesis.
+              </p>
+              <div style="margin-top: 14px;">
+                <span class="tech-tag tech-tag-highlight">National Programme on Technology Enhanced Learning</span>
+              </div>
+            </div>
+
+            <!-- Extracurricular Achievement -->
+            <div class="card-glass card-interactive" style="flex: 1;">
+              <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px;">
+                <span class="project-category">Project Exhibition</span>
+                <span class="project-year">2024</span>
+              </div>
+              <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--text-primary); margin-bottom: 8px;">
+                Project Exhibition — Srijan 2024
+              </h3>
+              <div style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-cyan); margin-bottom: 8px;">
+                RKGIT, Ghaziabad
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6;">
+                Showcased the Hand Gesture Recognition Gloves to academic faculty and industry experts, successfully demonstrating practical digital design application and embedded sensor processing.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-tag">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+          Get in Touch
+        </div>
+        <h2 class="section-title">Let's Connect &amp; Collaborate</h2>
+        <p class="section-subtitle">Interested in discussing VLSI internships, entry-level RTL engineering opportunities, or technical chip design projects? Reach out directly.</p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Contact Methods (Phone, Email, LinkedIn, GitHub) -->
+        <div class="col-6">
+          <div class="card-glass" style="height: 100%;">
+            <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; color: var(--text-primary);">Direct Contact Channels</h3>
+
+            <!-- Email Card -->
+            <div class="contact-link-card">
+              <div class="contact-info-left">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </div>
+                <div>
+                  <div class="contact-type">Email</div>
+                  <div class="contact-val">abhishekyaduvanshi144@gmail.com</div>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="abhishekyaduvanshi144@gmail.com" title="Copy Email">Copy</button>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="contact-link-card">
+              <div class="contact-info-left">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                </div>
+                <div>
+                  <div class="contact-type">Phone</div>
+                  <div class="contact-val">+91 63937 65991</div>
+                </div>
+              </div>
+              <button class="copy-btn" data-copy="+916393765991" title="Copy Phone">Copy</button>
+            </div>
+
+            <!-- LinkedIn Card -->
+            <a href="https://linkedin.com/in/abhishek-yadav-1088ba296" target="_blank" rel="noopener noreferrer" class="contact-link-card">
+              <div class="contact-info-left">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-type">LinkedIn</div>
+                  <div class="contact-val">abhishek-yadav-1088ba296</div>
+                </div>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan);">Visit ↗</span>
+            </a>
+
+            <!-- GitHub Card -->
+            <a href="https://github.com/abhishek144-alt" target="_blank" rel="noopener noreferrer" class="contact-link-card">
+              <div class="contact-info-left">
+                <div class="contact-icon-box">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="contact-type">GitHub</div>
+                  <div class="contact-val">abhishek144-alt</div>
+                </div>
+              </div>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan);">Visit ↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Message Form -->
+        <div class="col-6">
+          <div class="card-glass" style="height: 100%;">
+            <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 20px; color: var(--text-primary);">Send a Message</h3>
+            <form id="contact-form" class="contact-form">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Your Name</label>
+                <input type="text" id="contact-name" class="form-input" placeholder="e.g. Hiring Manager / Engineer" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Your Email</label>
+                <input type="email" id="contact-email" class="form-input" placeholder="name@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message</label>
+                <textarea id="contact-message" class="form-textarea" placeholder="Hello Abhishek, I reviewed your 8-bit ALU and VLSI project..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 8px;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"></line><polygon points="22 2 15 22 11 13 2 9 22 2"></polygon></svg>
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-content">
+        <div>
+          <a href="#hero" class="logo-link">
+            <span class="logo-chip">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <rect x="9" y="9" width="6" height="6" />
+              </svg>
+            </span>
+            <span>Abhishek Yadav // VLSI</span>
+          </a>
+          <p style="margin-top: 10px; font-size: 0.88rem; color: var(--text-muted); max-width: 420px;">
+            Aspiring VLSI Design &amp; RTL Engineer. Motivated ECE undergraduate building synthesizable digital systems and hardware logic.
+          </p>
+        </div>
+
+        <div style="display: flex; gap: 20px; align-items: center;">
+          <a href="https://github.com/abhishek144-alt" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); transition: var(--transition-fast);">
+            GitHub
+          </a>
+          <a href="https://linkedin.com/in/abhishek-yadav-1088ba296" target="_blank" rel="noopener noreferrer" style="color: var(--text-secondary); transition: var(--transition-fast);">
+            LinkedIn
+          </a>
+          <a href="mailto:abhishekyaduvanshi144@gmail.com" style="color: var(--text-secondary); transition: var(--transition-fast);">
+            Email
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © <span id="current-year">2026</span> Abhishek Yadav. Designed &amp; Engineered for High-Tech Hardware.
+        </div>
+        <div style="font-family: var(--font-mono); font-size: 0.8rem; color: var(--accent-cyan);">
+          Verilog HDL • Xilinx Vivado • GTKWave • RTL
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Pop-up -->
+  <div id="toast-notice" class="toast-notice">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--accent-cyan)" stroke-width="2">
+      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+      <polyline points="22 4 12 14.01 9 11.01"></polyline>
+    </svg>
+    <span id="toast-message">Copied to clipboard</span>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/alu-simulator.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
