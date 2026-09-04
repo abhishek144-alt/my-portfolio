@@ -17,3 +17,6 @@ npm-debug.log*
 # Scratch / Temp
 scratch/
 .system_generated/
+
+# Legacy backups
+_legacy/
