@@ -29,7 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
-    navLinks.forEach(link => {
+    const allNavLinks = document.querySelectorAll('.nav-manga-link, .nav-desktop .nav-link');
+    allNavLinks.forEach(link => {
       link.classList.remove('active');
       if (link.getAttribute('href') === `#${currentSectionId}`) {
         link.classList.add('active');
@@ -37,20 +38,49 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // Tech Stack Brutalist Tabs Switching
+  const techTabBtns = document.querySelectorAll('.tech-tab-btn');
+  const techPanels = {
+    hdl: document.getElementById('tab-panel-hdl'),
+    eda: document.getElementById('tab-panel-eda'),
+    domains: document.getElementById('tab-panel-domains')
+  };
+
+  if (techTabBtns.length > 0) {
+    techTabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        techTabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const tabKey = btn.dataset.tab;
+        Object.keys(techPanels).forEach(key => {
+          if (techPanels[key]) {
+            techPanels[key].style.display = key === tabKey ? 'grid' : 'none';
+          }
+        });
+      });
+    });
+  }
+
   // Mobile Menu Toggle
   if (mobileMenuBtn && mobileDrawer) {
-    mobileMenuBtn.addEventListener('click', () => {
-      mobileMenuBtn.classList.toggle('active');
-      mobileDrawer.classList.toggle('open');
-      document.body.style.overflow = mobileDrawer.classList.contains('open') ? 'hidden' : '';
-    });
+    const backdrop = document.querySelector('.nav-drawer-backdrop');
+    const closeBtn = document.querySelector('.drawer-close-btn');
+
+    const toggleDrawer = (isOpen) => {
+      const open = typeof isOpen === 'boolean' ? isOpen : !mobileDrawer.classList.contains('open');
+      mobileMenuBtn.classList.toggle('active', open);
+      mobileDrawer.classList.toggle('open', open);
+      if (backdrop) backdrop.classList.toggle('open', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    };
+
+    mobileMenuBtn.addEventListener('click', () => toggleDrawer());
+    if (closeBtn) closeBtn.addEventListener('click', () => toggleDrawer(false));
+    if (backdrop) backdrop.addEventListener('click', () => toggleDrawer(false));
 
     mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenuBtn.classList.remove('active');
-        mobileDrawer.classList.remove('open');
-        document.body.style.overflow = '';
-      });
+      link.addEventListener('click', () => toggleDrawer(false));
     });
   }
 

@@ -290,7 +290,7 @@
   gap: 8px;
 }
 
-.alu-op-btn {
+.alu-op-buttons .alu-op-btn {
   padding: 7px 14px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--border-medium);
@@ -301,12 +301,12 @@
   transition: var(--transition-fast);
 }
 
-.alu-op-btn:hover {
+.alu-op-buttons .alu-op-btn:hover {
   border-color: var(--accent-cyan);
   color: var(--text-primary);
 }
 
-.alu-op-btn.active {
+.alu-op-buttons .alu-op-btn.active {
   background: var(--accent-cyan);
   color: #07090e;
   border-color: var(--accent-cyan);
@@ -606,3 +606,1958 @@
   opacity: 1;
   pointer-events: auto;
 }
+
+/* ==========================================================================
+   Manga-Brutalist Front Section & Header (Inspired by Akash Kumar)
+   ========================================================================== */
+
+/* Brutalist Header */
+.site-header-brutalist {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: #ffffff;
+  border-bottom: 5px solid #000000;
+  width: 100%;
+}
+
+.nav-manga-container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-manga {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  font-family: var(--font-display);
+  line-height: 0.82;
+  letter-spacing: -0.5px;
+  position: relative;
+}
+
+.brand-manga .brand-first {
+  font-size: 2.2rem;
+  color: #000000;
+  font-style: italic;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.brand-manga .brand-chip-tag {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  font-weight: 800;
+  background: #000000;
+  color: #ffffff;
+  padding: 2px 6px;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  transform: skewX(-10deg);
+}
+
+.brand-manga .brand-last {
+  font-size: 2.2rem;
+  color: transparent;
+  -webkit-text-stroke: 1.5px #000000;
+  transition: all 0.25s ease;
+}
+
+.brand-manga:hover .brand-last {
+  color: #000000;
+}
+
+.brand-underline {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #000000;
+  transition: width 0.3s ease;
+}
+
+.brand-manga:hover .brand-underline {
+  width: 100%;
+}
+
+.nav-manga-desktop {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.nav-manga-links {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.nav-manga-link {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(0, 0, 0, 0.7);
+  padding: 6px 12px;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.nav-manga-link:hover {
+  color: #000000;
+  font-style: italic;
+}
+
+.header-manga-slash {
+  width: 2px;
+  height: 22px;
+  background: #000000;
+  transform: rotate(20deg);
+  margin: 0 4px;
+}
+
+.header-social-group {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.social-manga-icon {
+  color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.social-manga-icon:hover {
+  transform: scale(1.25);
+}
+
+.btn-brutalist-nav {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #000000;
+  background: #ffffff;
+  border: 3px solid #000000;
+  box-shadow: 5px 5px 0px 0px #000000;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.btn-brutalist-nav:hover {
+  box-shadow: 0px 0px 0px 0px #000000;
+  transform: translate(3px, 3px);
+  color: #000000;
+}
+
+.btn-manga-mobile-toggle {
+  display: none;
+  background: #000000;
+  color: #ffffff;
+  border: 2px solid #000000;
+  padding: 8px 10px;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px #000000;
+  transition: all 0.15s ease;
+}
+
+.btn-manga-mobile-toggle:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.btn-manga-mobile-toggle span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #ffffff;
+  margin: 4px 0;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+/* Brutalist Hero Section Frame */
+.hero-brutalist-frame {
+  margin: 12px;
+  border: 7px solid #000000;
+  background: #ffffff;
+  color: #000000;
+  min-height: 84vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 60px 48px;
+  box-sizing: border-box;
+}
+
+.halftone-matrix {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.045;
+  background-image: radial-gradient(#000000 1.5px, transparent 0);
+  background-size: 6px 6px;
+  z-index: 1;
+}
+
+.hero-brutalist-inner {
+  position: relative;
+  z-index: 20;
+  max-width: 820px;
+}
+
+.hero-manga-title {
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 10vw, 11rem);
+  line-height: 0.82;
+  letter-spacing: -2px;
+  font-style: italic;
+  color: #000000;
+  text-transform: uppercase;
+  margin: 0 0 20px 0;
+}
+
+.hero-title-stroke {
+  color: transparent;
+  -webkit-text-stroke: 2px #000000;
+  transition: color 0.3s ease;
+}
+
+.hero-title-stroke:hover {
+  color: #000000;
+}
+
+.hero-manga-role-badge {
+  display: inline-block;
+  background: #000000;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: clamp(0.9rem, 1.8vw, 1.25rem);
+  padding: 10px 22px;
+  transform: rotate(-1.5deg);
+  letter-spacing: 0.04em;
+  margin-bottom: 22px;
+}
+
+.hero-manga-desc {
+  font-family: var(--font-sans);
+  font-size: clamp(1rem, 1.4vw, 1.22rem);
+  font-weight: 500;
+  line-height: 1.65;
+  color: rgba(0, 0, 0, 0.78);
+  max-width: 660px;
+  margin-bottom: 24px;
+}
+
+.brutalist-chips-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.chip-brutal {
+  border: 2px solid #000000;
+  background: #ffffff;
+  color: #000000;
+  padding: 6px 14px;
+  font-size: clamp(0.72rem, 1vw, 0.82rem);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-family: var(--font-sans);
+  transition: all 0.2s ease;
+}
+
+.chip-brutal:hover {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+.hero-manga-location {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.45);
+  margin-bottom: 26px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.hero-manga-location .location-dot {
+  width: 6px;
+  height: 6px;
+  background: #dc2626;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.hero-manga-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  padding-top: 6px;
+}
+
+.btn-brutal-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  background: #000000;
+  color: #ffffff;
+  border: 3px solid #000000;
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.btn-brutal-primary:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+}
+
+.btn-brutal-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  background: #ffffff;
+  color: #000000;
+  border: 3px solid #000000;
+  box-shadow: 6px 6px 0px 0px #000000;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-decoration: none;
+}
+
+.btn-brutal-secondary:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px 0px 0px #000000;
+  color: #000000;
+}
+
+/* Manga Hero Graphic & Splatter */
+.hero-graphic-stage {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 52%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 10;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.hero-ink-backdrop {
+  position: absolute;
+  right: -20px;
+  bottom: -20px;
+  width: 140%;
+  max-width: 820px;
+  opacity: 0.14;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  transform: scaleX(-1);
+}
+
+.hero-manga-figure {
+  position: relative;
+  z-index: 15;
+  max-height: 94%;
+  max-width: 580px;
+  width: auto;
+  object-fit: contain;
+  object-position: bottom right;
+  filter: contrast(110%);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Side Rail */
+.hero-vertical-rail {
+  position: absolute;
+  bottom: 36px;
+  left: 36px;
+  z-index: 30;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.hero-rail-text {
+  writing-mode: vertical-lr;
+  font-family: var(--font-sans);
+  font-size: 0.65rem;
+  font-weight: 900;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.hero-rail-line {
+  width: 2px;
+  height: 70px;
+  background: linear-gradient(to bottom, #000000, transparent);
+}
+
+/* Mobile Responsiveness for Manga-Brutalist Front Section */
+@media (max-width: 1024px) {
+  .hero-graphic-stage {
+    width: 60%;
+    opacity: 0.35;
+  }
+
+  .hero-brutalist-frame {
+    padding: 50px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .site-header-brutalist {
+    border-bottom-width: 4px;
+  }
+
+  .nav-manga-desktop {
+    display: none;
+  }
+
+  .btn-manga-mobile-toggle {
+    display: block;
+  }
+
+  .hero-brutalist-frame {
+    margin: 8px;
+    border-width: 5px;
+    padding: 40px 20px;
+    min-height: auto;
+  }
+
+  .hero-graphic-stage {
+    position: absolute;
+    width: 100%;
+    opacity: 0.18;
+    right: -40px;
+  }
+
+  .hero-manga-title {
+    font-size: 4.8rem;
+    line-height: 0.88;
+  }
+
+  .hero-manga-role-badge {
+    font-size: 0.88rem;
+    padding: 8px 16px;
+  }
+
+  .hero-vertical-rail {
+    display: none;
+  }
+
+  .hero-manga-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-brutal-primary,
+  .btn-brutal-secondary {
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   Full Portfolio Manga-Brutalist Sections (Inspired by Akash Kumar)
+   ========================================================================== */
+
+/* Brutalist About Section (White Canvas like Tech Stack) */
+.section-about-brutal {
+  background-color: #ffffff;
+  color: #000000;
+  border-bottom: 6px solid #000000;
+  position: relative;
+  overflow: hidden;
+  padding: 90px 0;
+}
+
+.about-brutal-grid {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.about-manifesto-brutal {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 3.8vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -1.5px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 36px;
+}
+
+.about-manifesto-highlight {
+  position: relative;
+  display: inline-block;
+  background: #000000;
+  color: #ffffff;
+  padding: 4px 12px;
+  transform: skewX(-6deg);
+  border-left: 6px solid #dc2626;
+  margin-top: 6px;
+  transition: all 0.25s ease;
+}
+
+.about-manifesto-highlight:hover {
+  background: #000000;
+  color: #ffffff;
+  border-left-color: #dc2626;
+}
+
+.about-competencies-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 32px;
+}
+
+.about-comp-card {
+  border: 4px solid #000000;
+  background: #ffffff;
+  padding: 28px;
+  box-shadow: 8px 8px 0px #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.about-comp-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 11px 11px 0px #000000;
+  border-color: #000000;
+  background: #ffffff;
+}
+
+.about-comp-card .chip-brutal:hover {
+  background: #ffffff !important;
+  color: #000000 !important;
+  border-color: #000000 !important;
+}
+
+.about-comp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.about-comp-num {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-style: italic;
+  color: #dc2626;
+  line-height: 1;
+}
+
+.about-comp-title {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  font-style: italic;
+  letter-spacing: -0.5px;
+  color: #000000;
+  margin: 6px 0 10px 0;
+  line-height: 1;
+}
+
+.about-comp-desc {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #44403c;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+
+.about-comp-desc strong {
+  color: #000000;
+  font-weight: 800;
+}
+
+.about-comp-footer {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  padding-top: 14px;
+  border-top: 2px solid #000000;
+}
+
+.about-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  border: 4px solid #000000;
+  background: #ffffff;
+  box-shadow: 8px 8px 0px #000000;
+  transition: all 0.2s ease;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.about-status-bar:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 10px 10px 0px #000000;
+  border-color: #000000;
+  background: #ffffff;
+}
+
+.about-status-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.about-pulse-dot {
+  width: 12px;
+  height: 12px;
+  background: #10b981;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(16, 185, 129, 0.8);
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+.about-status-text {
+  font-size: 0.78rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #000000;
+  font-family: var(--font-sans);
+}
+
+/* Also retain legacy stone classes for Education & Credentials */
+.section-stone-dark {
+  background-color: #0c0a09;
+  color: #f5f5f4;
+  border-top: 2px solid #292524;
+  border-bottom: 2px solid #292524;
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.stone-halftone-overlay {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.05;
+  background-image: radial-gradient(#ffffff 1.5px, transparent 0);
+  background-size: 6px 6px;
+  z-index: 1;
+}
+
+.stone-inner-container {
+  position: relative;
+  z-index: 10;
+}
+
+.stone-about-grid {
+  display: grid;
+  grid-template-columns: 4fr 8fr;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+.stone-section-header-left {
+  border-left: 12px solid #f5f5f4;
+  padding-left: 24px;
+}
+
+.stone-section-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.8rem, 6.5vw, 6.8rem);
+  line-height: 0.82;
+  letter-spacing: -2px;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #f5f5f4;
+  margin: 0;
+}
+
+.stone-title-stroke {
+  color: transparent;
+  -webkit-text-stroke: 1.5px #f5f5f4;
+  transition: color 0.3s ease;
+}
+
+.stone-title-stroke:hover {
+  color: #f5f5f4;
+}
+
+.stone-category-tag {
+  margin-top: 14px;
+  font-size: 0.65rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.35em;
+  color: #78716c;
+  font-family: var(--font-sans);
+}
+
+.stone-skew-bar {
+  height: 8px;
+  width: 140px;
+  background: #f5f5f4;
+  transform: skewX(-20deg);
+  margin-top: 20px;
+}
+
+.stone-manifesto {
+  font-size: clamp(1.8rem, 3.4vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  color: #f5f5f4;
+  margin-bottom: 36px;
+  font-family: var(--font-sans);
+}
+
+.stone-manifesto-highlight {
+  position: relative;
+  display: inline-block;
+  color: #f5f5f4;
+  transition: color 0.3s;
+  z-index: 2;
+  padding: 0 4px;
+}
+
+.stone-manifesto-highlight .highlight-bg {
+  position: absolute;
+  inset: 0;
+  background: #f5f5f4;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.stone-manifesto-highlight:hover {
+  color: #0c0a09;
+}
+
+.stone-manifesto-highlight:hover .highlight-bg {
+  transform: scaleX(1);
+}
+
+.stone-competencies-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  padding-top: 32px;
+  border-top: 4px solid #292524;
+  margin-bottom: 32px;
+}
+
+.stone-comp-title {
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  font-style: italic;
+  letter-spacing: -0.5px;
+  color: #f5f5f4;
+  margin-bottom: 8px;
+}
+
+.stone-comp-tag {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-style: normal;
+  color: #78716c;
+}
+
+.stone-comp-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #a8a29e;
+  font-weight: 500;
+}
+
+.stone-comp-desc strong {
+  color: #f5f5f4;
+  font-style: italic;
+}
+
+.stone-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 22px;
+  border: 2px solid #292524;
+  background: rgba(255, 255, 255, 0.02);
+  transition: all 0.2s ease;
+}
+
+.stone-status-bar:hover {
+  border-color: #57534e;
+}
+
+.stone-status-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stone-pulse-dot {
+  width: 12px;
+  height: 12px;
+  background: #57534e;
+  border-radius: 50%;
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+.stone-status-bar:hover .stone-pulse-dot {
+  background: #dc2626;
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.6);
+}
+
+.stone-status-text {
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: #78716c;
+  font-family: var(--font-sans);
+}
+
+/* Brutalist Tech Stack Section */
+.section-tech-brutal {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 90px 0;
+  border-bottom: 6px solid #000000;
+  position: relative;
+}
+
+.tech-header-block {
+  border-left: 12px solid #000000;
+  padding-left: 24px;
+  margin-bottom: 36px;
+}
+
+.tech-brutal-title {
+  font-family: var(--font-display);
+  font-size: clamp(4rem, 7.5vw, 7.5rem);
+  line-height: 0.82;
+  letter-spacing: -2px;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+}
+
+.tech-tabs-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border: 4px solid #000000;
+  background: #000000;
+  gap: 0;
+  position: relative;
+  z-index: 10;
+}
+
+.tech-tab-btn {
+  padding: 20px 24px;
+  text-align: left;
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-right: 4px solid #000000;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-tab-btn:last-child {
+  border-right: none;
+}
+
+.tech-tab-btn.active {
+  background: #000000;
+  color: #ffffff;
+}
+
+.tech-tab-btn:not(.active):hover {
+  background: #f5f5f4;
+}
+
+.tab-btn-sub {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  font-style: italic;
+  margin-bottom: 4px;
+  font-family: var(--font-sans);
+}
+
+.tab-btn-main {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-style: italic;
+  letter-spacing: -0.5px;
+  line-height: 1;
+}
+
+.tech-canvas-panel {
+  border: 4px solid #000000;
+  border-top: none;
+  padding: 44px;
+  background: #ffffff;
+  box-shadow: 16px 16px 0px rgba(0, 0, 0, 0.05);
+  display: grid;
+  grid-template-columns: 5fr 7fr;
+  gap: 40px;
+  min-height: 440px;
+  position: relative;
+}
+
+.tech-canvas-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.tech-registry-code {
+  display: inline-block;
+  border: 2px solid #000000;
+  padding: 4px 12px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-family: var(--font-mono);
+  align-self: flex-start;
+}
+
+.tech-canvas-headline {
+  font-family: var(--font-sans);
+  font-size: clamp(1.6rem, 2.5vw, 2.6rem);
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -1px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.tech-canvas-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 500;
+  padding-top: 18px;
+  border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.tech-tiles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.tech-tile-brutal {
+  position: relative;
+  height: 110px;
+  border: 3px solid #000000;
+  background: #ffffff;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  cursor: crosshair;
+  overflow: hidden;
+  transition: all 0.25s ease;
+}
+
+.tech-tile-red-bar {
+  display: none !important;
+}
+
+.tech-tile-brutal:hover {
+  background: #000000;
+  color: #ffffff;
+}
+
+.tech-tile-brutal:hover .tech-tile-red-bar {
+  display: none !important;
+}
+
+.tech-tile-name {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: -0.5px;
+  color: #000000;
+  line-height: 1;
+  transition: color 0.25s ease;
+}
+
+.tech-tile-brutal:hover .tech-tile-name {
+  color: #ffffff;
+}
+
+.tech-tile-sub {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 4px;
+  transition: color 0.25s ease;
+}
+
+.tech-tile-brutal:hover .tech-tile-sub {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* Brutalist ALU Simulator Lab Section (White Canvas like Tech Stack) */
+.section-alu-lab {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 90px 0;
+  border-bottom: 6px solid #000000;
+  position: relative;
+}
+
+.alu-lab-frame {
+  border: 4px solid #000000;
+  background: #ffffff;
+  padding: 38px;
+  box-shadow: 14px 14px 0px #000000;
+  margin-top: 36px;
+  position: relative;
+}
+
+.alu-lab-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #000000;
+  padding-bottom: 18px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.alu-lab-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-weight: 900;
+  color: #ffffff;
+  background: #000000;
+  padding: 6px 14px;
+  transform: skewX(-8deg);
+  border-left: 4px solid #dc2626;
+}
+
+.alu-lab-inputs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  margin-bottom: 28px;
+}
+
+.alu-field-label {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 900;
+  color: #000000;
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.alu-input-brutal {
+  width: 100%;
+  background: #fafaf9;
+  border: 3px solid #000000;
+  color: #000000;
+  padding: 14px 18px;
+  font-family: var(--font-mono);
+  font-size: 1.35rem;
+  font-weight: 900;
+  box-sizing: border-box;
+  box-shadow: 4px 4px 0px #000000;
+  transition: all 0.2s ease;
+}
+
+.alu-input-brutal:focus {
+  outline: none;
+  background: #ffffff;
+  border-color: #000000;
+  box-shadow: 4px 4px 0px #dc2626;
+  transform: translate(-2px, -2px);
+}
+
+.alu-ops-selector {
+  margin-bottom: 28px;
+}
+
+.alu-ops-title {
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 900;
+  color: #000000;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+  display: block;
+}
+
+.alu-ops-button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 10px;
+}
+
+.alu-op-button-brutal {
+  background: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+  padding: 12px 14px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 3px 3px 0px #000000;
+  transition: all 0.15s ease;
+  text-align: center;
+}
+
+.alu-op-button-brutal:hover {
+  background: #ffffff;
+  color: #000000;
+  border-color: #000000;
+  transform: translate(-1px, -1px);
+  box-shadow: 4px 4px 0px #000000;
+}
+
+.alu-op-button-brutal:focus,
+.alu-op-button-brutal:focus-visible {
+  outline: none;
+}
+
+.alu-op-button-brutal.active {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+  box-shadow: 4px 4px 0px #dc2626;
+  font-weight: 900;
+  transform: translate(-2px, -2px);
+}
+
+.alu-op-button-brutal.active:hover {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+  box-shadow: 4px 4px 0px #dc2626;
+}
+
+.alu-terminal-screen {
+  background: #09090b;
+  border: 4px solid #000000;
+  padding: 28px;
+  box-shadow: 8px 8px 0px #000000;
+  margin-top: 24px;
+}
+
+.alu-bus-readout-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #27272a;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.alu-bus-bits {
+  font-family: var(--font-mono);
+  font-size: clamp(1.5rem, 3vw, 2.6rem);
+  font-weight: 900;
+  letter-spacing: 3px;
+  color: #10b981;
+  text-shadow: 0 0 12px rgba(16, 185, 129, 0.5);
+}
+
+.alu-radix-values {
+  display: flex;
+  gap: 28px;
+}
+
+.alu-radix-block {
+  text-align: right;
+}
+
+.alu-radix-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #a1a1aa;
+  text-transform: uppercase;
+  display: block;
+}
+
+.alu-radix-num {
+  font-family: var(--font-mono);
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #f4f4f5;
+}
+
+.alu-flags-matrix {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.alu-flag-card {
+  border: 2px solid #27272a;
+  background: #18181b;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 3px 3px 0px #000000;
+}
+
+.flag-led {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #3f3f46;
+  transition: all 0.2s ease;
+}
+
+.flag-led.active {
+  background: #10b981;
+  box-shadow: 0 0 10px #10b981;
+}
+
+.flag-name {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #f4f4f5;
+}
+
+/* Brutalist Active Projects Section */
+.section-projects-brutal {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 90px 0;
+  border-bottom: 6px solid #000000;
+  position: relative;
+}
+
+.projects-header-row {
+  display: flex;
+  align-items: flex-end;
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.projects-brutal-title {
+  font-family: var(--font-display);
+  font-size: clamp(3.8rem, 8vw, 8rem);
+  line-height: 0.82;
+  letter-spacing: -2px;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.projects-divider-bar {
+  height: 4px;
+  width: 100%;
+  background: #000000;
+  margin-bottom: 14px;
+  position: relative;
+}
+
+.projects-divider-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  background: #dc2626;
+}
+
+.projects-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 36px;
+}
+
+.project-card-brutal {
+  border: 4px solid #000000;
+  background: #ffffff;
+  padding: 28px;
+  box-shadow: 8px 8px 0px 0px #000000;
+  transition: all 0.2s ease;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-card-brutal:hover {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px 0px #000000;
+}
+
+.project-card-notch {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 34px;
+  height: 34px;
+  background: #000000;
+  transform: skewX(45deg) translate(17px, -17px);
+}
+
+.project-top-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.project-cat-badge {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.project-card-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 3.2vw, 2.8rem);
+  line-height: 0.95;
+  letter-spacing: -0.5px;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0 0 14px 0;
+  transition: all 0.2s ease;
+}
+
+.project-card-brutal:hover .project-card-title {
+  font-style: italic;
+  text-decoration: underline;
+  text-decoration-color: #dc2626;
+  text-underline-offset: 4px;
+}
+
+.project-card-desc {
+  border-left: 3px solid #000000;
+  padding-left: 14px;
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1.55;
+  color: rgba(0, 0, 0, 0.8);
+  margin-bottom: 20px;
+}
+
+.project-highlights-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.project-highlights-list li {
+  position: relative;
+  padding-left: 16px;
+  line-height: 1.45;
+}
+
+.project-highlights-list li::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #dc2626;
+  font-weight: 900;
+}
+
+.project-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+
+.project-tag-skew {
+  background: #000000;
+  color: #ffffff;
+  padding: 3px 9px;
+  font-size: 0.72rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  transform: skewX(-10deg);
+  font-family: var(--font-sans);
+}
+
+/* Core Commitments / Technical Standards Section */
+/* Brutalist Education & Credentials Section (White Canvas like Tech Stack) */
+.section-education-brutal,
+.section-standards-stone {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 90px 0;
+  border-bottom: 6px solid #000000;
+  position: relative;
+}
+
+.section-education-brutal .container {
+  max-width: 1400px;
+}
+
+/* Dedicated Brutalist Education & Credentials */
+.edu-bento-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr 1fr;
+  gap: 24px;
+  align-items: start;
+  margin-top: 36px;
+}
+
+.edu-timeline-card {
+  border: 4px solid #000000;
+  background: #ffffff;
+  padding: 38px;
+  box-shadow: 12px 12px 0px #000000;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+}
+
+.edu-timeline-header {
+  border-bottom: 3px solid #000000;
+  padding-bottom: 18px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.edu-timeline-items {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+}
+
+.edu-item-brutal {
+  position: relative;
+  padding-left: 26px;
+  border-left: 3px solid #000000;
+  transition: all 0.2s ease;
+}
+
+.edu-item-brutal:hover {
+  border-left-color: #dc2626;
+}
+
+.edu-dot {
+  position: absolute;
+  left: -8px;
+  top: 4px;
+  width: 14px;
+  height: 14px;
+  background: #ffffff;
+  border: 3px solid #000000;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.edu-item-brutal:hover .edu-dot {
+  background: #dc2626;
+  border-color: #000000;
+  box-shadow: 0 0 10px rgba(220, 38, 38, 0.8);
+}
+
+.edu-date-tag {
+  display: inline-block;
+  background: #000000;
+  color: #ffffff;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  transform: skewX(-10deg);
+  margin-bottom: 10px;
+}
+
+.edu-degree-title {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 2.4vw, 2.4rem);
+  line-height: 1;
+  letter-spacing: -0.5px;
+  color: #000000;
+  margin: 0 0 6px 0;
+}
+
+.edu-institute {
+  font-size: 0.92rem;
+  color: #57534e;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.edu-cgpa-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-mono);
+  font-size: 0.82rem;
+  font-weight: 900;
+  color: #000000;
+  background: #ffffff;
+  border: 2px solid #000000;
+  padding: 5px 12px;
+}
+
+.edu-cert-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.edu-cert-card-brutal {
+  border: 4px solid #000000;
+  background: #ffffff;
+  padding: 32px;
+  box-shadow: 10px 10px 0px #000000;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.edu-cert-card-brutal:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 14px 14px 0px #000000;
+}
+
+.edu-cert-card-brutal .tech-tile-red-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: #000000;
+}
+
+.credential-cert-preview {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+  margin-bottom: 20px;
+}
+
+/* Brutalist Direct Contact Channels & Form */
+.section-contact-brutal {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 90px 0;
+  position: relative;
+}
+
+.contact-channels-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  margin-top: 40px;
+}
+
+.channel-card-brutal {
+  border: 3px solid #000000;
+  padding: 24px;
+  background: #ffffff;
+  box-shadow: 6px 6px 0px 0px #000000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-decoration: none;
+  color: #000000;
+  margin-bottom: 16px;
+  transition: all 0.15s ease;
+}
+
+.channel-card-brutal:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 0px 0px 0px 0px #000000;
+}
+
+.channel-info-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.channel-icon-box {
+  width: 44px;
+  height: 44px;
+  border: 2px solid #000000;
+  background: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.channel-type-label {
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  font-family: var(--font-sans);
+}
+
+.channel-value-text {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #000000;
+}
+
+.form-brutal-container {
+  border: 4px solid #000000;
+  padding: 32px;
+  background: #ffffff;
+  box-shadow: 8px 8px 0px 0px #000000;
+}
+
+.form-input-brutal {
+  width: 100%;
+  border: 3px solid #000000;
+  background: #ffffff;
+  color: #000000;
+  padding: 12px 16px;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-top: 6px;
+  margin-bottom: 18px;
+  box-sizing: border-box;
+}
+
+.form-input-brutal:focus {
+  outline: none;
+  box-shadow: 4px 4px 0px #000000;
+}
+
+/* Mega Brutalist Footer (Inspired by Akash Kumar) */
+.site-footer-mega-brutal {
+  background-color: #ffffff;
+  color: #000000;
+  padding-top: 90px;
+  padding-bottom: 40px;
+  border-t: 12px solid #000000;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer-halftone-bg {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  pointer-events: none;
+  background-image: radial-gradient(#000000 2px, transparent 0);
+  background-size: 10px 10px;
+}
+
+.footer-ink-watermark {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 480px;
+  height: 480px;
+  opacity: 0.08;
+  pointer-events: none;
+  transform: rotate(90deg) scale(1.4);
+}
+
+.footer-grid-top {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: 36px;
+  align-items: flex-end;
+  border-bottom: 6px solid #000000;
+  padding-bottom: 32px;
+  margin-bottom: 48px;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-collab-badge {
+  display: inline-block;
+  background: #000000;
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 900;
+  letter-spacing: 0.45em;
+  padding: 4px 12px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-family: var(--font-sans);
+}
+
+.footer-manga-title {
+  font-family: var(--font-display);
+  font-size: clamp(4.5rem, 9.5vw, 9.5rem);
+  line-height: 0.82;
+  letter-spacing: -2px;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #000000;
+  margin: 0;
+}
+
+.footer-skew-bar {
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 100%;
+  height: 14px;
+  background: #000000;
+  transform: skewX(-20deg);
+}
+
+.footer-action-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 48px;
+  position: relative;
+  z-index: 10;
+}
+
+.footer-inquiry-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-inquiry-label {
+  font-size: 0.72rem;
+  font-weight: 900;
+  letter-spacing: 0.35em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.5);
+  margin-bottom: 4px;
+}
+
+.footer-email-link {
+  font-family: var(--font-display);
+  font-size: clamp(1.8rem, 3.5vw, 3.2rem);
+  color: #000000;
+  text-decoration: none;
+  letter-spacing: -0.5px;
+  transition: all 0.2s ease;
+}
+
+.footer-email-link:hover {
+  font-style: italic;
+  color: #dc2626;
+}
+
+.btn-brutal-mega-resume {
+  position: relative;
+  padding: 18px 36px;
+  background: #000000;
+  color: #ffffff;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  letter-spacing: 0.15em;
+  font-style: italic;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  border: 3px solid #000000;
+  box-shadow: 6px 6px 0px 0px rgba(0, 0, 0, 0.25);
+  transition: all 0.15s ease;
+}
+
+.btn-brutal-mega-resume:hover {
+  transform: translate(3px, 3px);
+  box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
+  color: #ffffff;
+}
+
+.footer-bottom-bar {
+  border-top: 2px solid #000000;
+  padding-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.7);
+  flex-wrap: wrap;
+  gap: 12px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Responsiveness for all new brutalist sections */
+@media (max-width: 1024px) {
+  .about-brutal-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .stone-about-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .tech-canvas-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .credentials-brutal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .edu-bento-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .commitments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid-top {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-competencies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-tabs-row {
+    grid-template-columns: 1fr;
+  }
+
+  .tech-tab-btn {
+    border-right: none;
+    border-bottom: 3px solid #000000;
+  }
+
+  .tech-tiles-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .alu-lab-inputs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .alu-flags-matrix {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .stone-competencies-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-channels-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-action-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-brutal-mega-resume {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+
