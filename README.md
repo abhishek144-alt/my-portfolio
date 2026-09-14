@@ -58,7 +58,7 @@ Simply double-click [`index.html`](index.html) or right-click and open with your
 ```bash
 node server.js
 ```
-Then navigate to: `http://localhost:3000/`
+Then navigate to: `[https://abhishek144-alt.github.io/my-portfolio/]`
 
 ---
 
