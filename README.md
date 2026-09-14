@@ -20,7 +20,7 @@
 - **Full Resume Integration**:
   - Professional Summary & Core Engineering Domains
   - Skills Matrix: Verilog HDL, RTL Design, CMOS, Xilinx Vivado, GTKWave, Icarus Verilog
-  - Projects: 8-Bit ALU (Verilog) & Hand Gesture Recognition Gloves (Embedded/IoT)
+  - Projects: 8-Bit ALU Core (Verilog), UART Transceiver RTL Core & Verification (Verilog), & Hand Gesture Recognition Gloves (Embedded/IoT)
   - Education: B.Tech ECE (CGPA: 8.03), Intermediate, High School, NPTEL Certification, Srijan 2024
   - Contact Channels: One-click copy for email and phone, LinkedIn, GitHub, and contact form.
 - **Zero Build Step**: Native HTML5, CSS3, and JavaScript — works instantly in any web browser without build tooling.
