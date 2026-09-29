@@ -1998,10 +1998,11 @@
 }
 
 .projects-cards-grid {
-  display: flex;
-  flex-direction: row;
-  overflow-x: auto;
-  overflow-y: hidden;
+  display: flex !important;
+  flex-direction: row !important;
+  flex-wrap: nowrap !important;
+  overflow-x: auto !important;
+  overflow-y: hidden !important;
   gap: 32px;
   padding: 10px 4px 28px 4px;
   scroll-snap-type: x mandatory;
@@ -2028,7 +2029,9 @@
 }
 
 .project-card-brutal {
-  flex: 0 0 400px;
+  flex: 0 0 400px !important;
+  min-width: 360px !important;
+  flex-shrink: 0 !important;
   max-width: 86vw;
   scroll-snap-align: start;
   border: 4px solid #000000;

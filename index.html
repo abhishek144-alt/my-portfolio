@@ -19,11 +19,33 @@
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;700;800&display=swap" rel="stylesheet">
 
   <!-- Stylesheets -->
-  <link rel="stylesheet" href="css/variables.css">
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/layout.css">
-  <link rel="stylesheet" href="css/components.css">
-  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/variables.css?v=1.2">
+  <link rel="stylesheet" href="css/reset.css?v=1.2">
+  <link rel="stylesheet" href="css/layout.css?v=1.2">
+  <link rel="stylesheet" href="css/components.css?v=1.2">
+  <link rel="stylesheet" href="css/animations.css?v=1.2">
+
+  <style>
+    /* Force projects to stay strictly in a single horizontal sliding row */
+    .projects-cards-grid {
+      display: flex !important;
+      flex-direction: row !important;
+      flex-wrap: nowrap !important;
+      overflow-x: auto !important;
+      overflow-y: hidden !important;
+      gap: 32px !important;
+      padding: 10px 4px 28px 4px !important;
+      scroll-snap-type: x mandatory !important;
+      -webkit-overflow-scrolling: touch !important;
+    }
+    .projects-cards-grid .project-card-brutal {
+      flex: 0 0 400px !important;
+      min-width: 360px !important;
+      max-width: 86vw !important;
+      flex-shrink: 0 !important;
+      scroll-snap-align: start !important;
+    }
+  </style>
 </head>
 <body>
 
@@ -498,7 +520,7 @@
         </div>
       </div>
 
-      <div class="projects-cards-grid">
+      <div class="projects-cards-grid" style="display: flex !important; flex-direction: row !important; flex-wrap: nowrap !important; overflow-x: auto !important; overflow-y: hidden !important;">
         <!-- Project 1: 8-Bit ALU -->
         <div class="project-card-brutal" id="project-alu">
           <div class="project-card-notch"></div>
