@@ -46,7 +46,6 @@
         <div class="nav-manga-links">
           <a href="#about" class="nav-manga-link">About</a>
           <a href="#skills" class="nav-manga-link">Skills</a>
-          <a href="#alu-demo" class="nav-manga-link">ALU Demo</a>
           <a href="#projects" class="nav-manga-link">Projects</a>
           <a href="#education" class="nav-manga-link">Education</a>
           <a href="#contact" class="nav-manga-link">Contact</a>
@@ -111,10 +110,6 @@
         <span class="nav-drawer-text">SKILLS &amp; TOOLS</span>
         <span class="nav-drawer-arrow">▹</span>
       </a>
-      <a href="#alu-demo" class="nav-link nav-drawer-link">
-        <span class="nav-drawer-text">INTERACTIVE ALU</span>
-        <span class="nav-drawer-arrow">▹</span>
-      </a>
       <a href="#projects" class="nav-link nav-drawer-link">
         <span class="nav-drawer-text">PROJECTS</span>
         <span class="nav-drawer-arrow">▹</span>
@@ -176,7 +171,7 @@
       <!-- Angled Role Tag -->
       <div>
         <div class="hero-manga-role-badge">
-          VLSI Design & RTL Systems Engineer
+          VLSI Design & RTL Design Engineer
         </div>
       </div>
 
@@ -187,11 +182,12 @@
 
       <!-- Neo-Brutalist Specs Chips -->
       <div class="brutalist-chips-row">
-        <span class="chip-brutal">VERILOG HDL & RTL</span>
-        <span class="chip-brutal">8-BIT ALU CORE</span>
+        <span class="chip-brutal">VERILOG HDL</span>
+        <span class="chip-brutal">TCL</span>
         <span class="chip-brutal">XILINX VIVADO</span>
-        <span class="chip-brutal">FPGA / ASIC FRONTEND</span>
-        <span class="chip-brutal">GTKWAVE SIMULATION</span>
+        <span class="chip-brutal">RTL / ASIC FRONTEND</span>
+        <span class="chip-brutal">SIMULATION</span>
+        <span class="chip-brutal">SYNTHESIS</span>
       </div>
 
       <!-- Location / Status -->
@@ -202,18 +198,19 @@
 
       <!-- High-Impact Action CTAs -->
       <div class="hero-manga-actions">
-        <a href="#alu-demo" class="btn-brutal-primary">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-            <polygon points="5 3 19 12 5 21 5 3"></polygon>
-          </svg>
-          Launch ALU Simulator
-        </a>
-        <a href="#projects" class="btn-brutal-secondary">
+        <a href="#projects" class="btn-brutal-primary">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
             <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
             <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
           </svg>
           Explore RTL Cores
+        </a>
+        <a href="#contact" class="btn-brutal-secondary">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+            <polyline points="22,6 12,13 2,6"></polyline>
+          </svg>
+          Get In Touch
         </a>
       </div>
     </div>
@@ -242,7 +239,7 @@
               ABOUT <br/><span class="hero-title-stroke">ME</span>
             </h2>
             <div style="font-size: 0.75rem; font-weight: 900; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(0,0,0,0.5); font-family: var(--font-sans); margin-top: 10px;">
-              VLSI Design · RTL Synthesis · Hardware Architecture
+              VLSI Design · RTL Design · Hardware Architecture
             </div>
           </div>
           
@@ -478,132 +475,24 @@
     </div>
   </section>
 
-  <!-- Interactive 8-Bit ALU Demo: Manga-Brutalist White Canvas -->
-  <section id="alu-demo" class="section-alu-lab">
-    <div class="container">
-      <div class="tech-header-block">
-        <h2 class="tech-brutal-title">
-          LIVE RTL <br/><span class="hero-title-stroke">SIMULATOR</span>
-        </h2>
-        <div style="font-size: 0.75rem; font-weight: 900; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(0,0,0,0.5); font-family: var(--font-sans); margin-top: 10px;">
-          Synthesizable 8-Bit ALU Core // Register-Level Emulation
-        </div>
-      </div>
 
-      <div class="alu-lab-frame">
-        <div class="alu-lab-header">
-          <div class="alu-lab-tag">
-            <span>AY-ALU-808 // VERILOG_RTL_EMULATION</span>
-          </div>
-          <div style="font-family: var(--font-mono); font-size: 0.82rem; color: #000000; font-weight: 800; letter-spacing: 0.05em;">
-            PRECISION: 8-BIT UNSIGNED / 2'S COMPLEMENT // 9 OPCODES
-          </div>
-        </div>
-
-        <!-- Inputs Grid -->
-        <div class="alu-lab-inputs-grid">
-          <div>
-            <div class="alu-field-label">
-              <span>OPERAND A [7:0]</span>
-              <span style="color: #059669; font-weight: 900;">DECIMAL (0–255)</span>
-            </div>
-            <input type="number" id="alu-operand-a" class="alu-input-brutal" min="0" max="255" value="142">
-          </div>
-          <div>
-            <div class="alu-field-label">
-              <span>OPERAND B [7:0]</span>
-              <span style="color: #059669; font-weight: 900;">DECIMAL (0–255)</span>
-            </div>
-            <input type="number" id="alu-operand-b" class="alu-input-brutal" min="0" max="255" value="35">
-          </div>
-        </div>
-
-        <!-- Opcode Buttons -->
-        <div class="alu-ops-selector">
-          <span class="alu-ops-title">SELECT ALU OPERATION [3:0] (9 SYNTHESIZABLE OPS):</span>
-          <div class="alu-ops-button-grid">
-            <button class="alu-op-btn alu-op-button-brutal active" data-op="ADD">ADD (A + B)</button>
-            <button class="alu-op-btn alu-op-button-brutal" data-op="SUB">SUB (A - B)</button>
-            <button class="alu-op-btn alu-op-button-brutal" data-op="AND">AND (A &amp; B)</button>
-            <button class="alu-op-btn alu-op-button-brutal" data-op="OR">OR (A | B)</button>
-            <button class="alu-op-btn alu-op-button-brutal" data-op="XOR">XOR (A ^ B)</button>
-            <button class="alu-op-btn alu-op-button-brutal" data-op="NAND">NAND ~(A &amp; B)</button>
-            <button class="alu-op-btn alu-op-button-brutal" data-op="NOR">NOR ~(A | B)</button>
-            <button class="alu-op-btn alu-op-button-brutal" data-op="SHL">SHL (A &lt;&lt; 1)</button>
-            <button class="alu-op-btn alu-op-button-brutal" data-op="SHR">SHR (A &gt;&gt; 1)</button>
-          </div>
-        </div>
-
-        <!-- Logic Analyzer / Terminal Screen -->
-        <div class="alu-terminal-screen">
-          <div class="alu-bus-readout-row">
-            <div>
-              <span style="display: block; font-family: var(--font-mono); font-size: 0.72rem; color: #a1a1aa; text-transform: uppercase; margin-bottom: 6px; font-weight: 800; letter-spacing: 0.15em;">
-                ALU_OUT [7:0] BUS (HARDWARE REGISTER)
-              </span>
-              <div id="alu-res-bin" class="alu-bus-bits">8'b1011_0001</div>
-            </div>
-            <div class="alu-radix-values">
-              <div class="alu-radix-block">
-                <span class="alu-radix-label">HEX VALUE</span>
-                <div id="alu-res-hex" class="alu-radix-num">0xB1</div>
-              </div>
-              <div class="alu-radix-block">
-                <span class="alu-radix-label">DEC VALUE</span>
-                <div id="alu-res-dec" class="alu-radix-num" style="color: #60a5fa;">177</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Flags Matrix -->
-          <div class="alu-flags-matrix">
-            <div class="alu-flag-card">
-              <span id="flag-carry" class="flag-led"></span>
-              <span class="flag-name">CARRY [C]</span>
-            </div>
-            <div class="alu-flag-card">
-              <span id="flag-zero" class="flag-led"></span>
-              <span class="flag-name">ZERO [Z]</span>
-            </div>
-            <div class="alu-flag-card">
-              <span id="flag-overflow" class="flag-led"></span>
-              <span class="flag-name">OVERFLOW [V]</span>
-            </div>
-            <div class="alu-flag-card">
-              <span id="flag-negative" class="flag-led"></span>
-              <span class="flag-name">NEGATIVE [N]</span>
-            </div>
-          </div>
-        </div>
-
-        <div style="margin-top: 24px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
-          <span style="font-family: var(--font-mono); font-size: 0.82rem; color: #000000; font-weight: 800;">
-            ⚡ Verified with self-checking testbench in Icarus Verilog and synthesized in Vivado.
-          </span>
-          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-            <a href="https://github.com/abhishek144-alt/verilog-alu-8bit" target="_blank" rel="noopener noreferrer" class="btn-brutal-primary" style="padding: 9px 18px; font-size: 0.76rem; text-decoration: none; box-shadow: 4px 4px 0px #000000; display: inline-flex; align-items: center; gap: 8px;">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
-                <path d="M9 18c-4.51 2-5-2-7-2"></path>
-              </svg>
-              VIEW ALU REPO ▹
-            </a>
-            <a href="#projects" class="btn-brutal-secondary" style="padding: 9px 18px; font-size: 0.76rem; box-shadow: 4px 4px 0px #000000; border: 2px solid #000000;">
-              VIEW ARCHITECTURE ▹
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Active Projects Section: Manga-Brutalist White Canvas -->
   <section id="projects" class="section-projects-brutal">
     <div class="container">
       <div class="projects-header-row">
-        <h2 class="projects-brutal-title">
-          ACTIVE <br/><span class="hero-title-stroke">PROJECTS</span>
-        </h2>
+        <div style="display: flex; justify-content: space-between; align-items: flex-end; flex-wrap: wrap; gap: 16px; width: 100%; margin-bottom: 12px;">
+          <h2 class="projects-brutal-title">
+            ACTIVE <br/><span class="hero-title-stroke">PROJECTS</span>
+          </h2>
+          <div class="projects-slide-nav">
+            <span class="projects-slide-hint">◄ SLIDE HORIZONTALLY ►</span>
+            <div class="projects-nav-buttons">
+              <button class="btn-proj-arrow" id="proj-btn-prev" aria-label="Slide Left">◄</button>
+              <button class="btn-proj-arrow" id="proj-btn-next" aria-label="Slide Right">►</button>
+            </div>
+          </div>
+        </div>
         <div class="projects-divider-bar">
           <div class="projects-divider-fill"></div>
         </div>
@@ -645,12 +534,7 @@
                   </svg>
                   VIEW REPOSITORY ▹
                 </a>
-                <a href="#alu-demo" class="btn-brutal-secondary" style="padding: 8px 14px; font-size: 0.76rem; text-decoration: none; box-shadow: 4px 4px 0px #000000; border: 2px solid #000000; display: inline-flex; align-items: center; gap: 6px;">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                    <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                  </svg>
-                  SIMULATOR ▹
-                </a>
+
               </div>
               <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #059669; font-weight: 900; letter-spacing: 0.1em; display: inline-flex; align-items: center; gap: 6px;">
                 <span style="width: 8px; height: 8px; background: #059669; border-radius: 50%; display: inline-block;"></span>
@@ -659,14 +543,57 @@
             </div>
           </div>
         </div>
+        <!-- Project 2: 4-Bit RISC-Style Processor -->
+        <div class="project-card-brutal" id="project-processor">
+          <div class="project-card-notch"></div>
+          <div>
+            <div class="project-top-meta">
+              <span class="project-cat-badge">RTL Design // RISC Core</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800;">[02]</span>
+            </div>
+            <h3 class="project-card-title">4-Bit RISC-Style Processor</h3>
+            <p class="project-card-desc">
+              Custom 4-bit processor engineered in Verilog HDL featuring an 8-bit instruction set, modular datapath, general-purpose register file, and unified Vivado testbench verification.
+            </p>
+            <ul class="project-highlights-list">
+              <li>Designed and integrated a custom 4-bit processor in Verilog, combining a Program Counter, Instruction Memory, Control Unit, Register File, ALU, and Data Memory.</li>
+              <li>Implemented a custom 8-bit instruction format supporting arithmetic, logical, LOAD, STORE, and HALT operations, with a 4-bit datapath and four general-purpose registers.</li>
+              <li>Developed individual Verilog testbenches for the ALU, Register File, Control Unit, Program Counter, Instruction Memory, and Data Memory, followed by processor-level verification.</li>
+              <li>Built a self-checking processor testbench in Xilinx Vivado and verified instruction execution, register operations, memory read/write operations, program sequencing, and HALT behavior.</li>
+              <li>Verified the complete execution flow by loading 5 and 3 from data memory, performing addition, and storing the result 8 back into memory.</li>
+            </ul>
+          </div>
+          <div>
+            <div class="project-tags-row">
+              <span class="project-tag-skew">Verilog HDL</span>
+              <span class="project-tag-skew">RTL Design</span>
+              <span class="project-tag-skew">Digital Design</span>
+              <span class="project-tag-skew">Xilinx Vivado</span>
+              <span class="project-tag-skew">Functional Verification</span>
+            </div>
+            <div class="project-card-actions" style="margin-top: 18px; padding-top: 14px; border-top: 2px dashed rgba(0, 0, 0, 0.15); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px;">
+              <a href="https://github.com/abhishek144-alt/4-bit-Processor-Verilog" target="_blank" rel="noopener noreferrer" class="btn-brutal-primary" style="padding: 8px 16px; font-size: 0.76rem; text-decoration: none; box-shadow: 4px 4px 0px #000000; display: inline-flex; align-items: center; gap: 8px;">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"></path>
+                  <path d="M9 18c-4.51 2-5-2-7-2"></path>
+                </svg>
+                VIEW REPOSITORY ▹
+              </a>
+              <span style="font-family: var(--font-mono); font-size: 0.72rem; color: #059669; font-weight: 900; letter-spacing: 0.1em; display: inline-flex; align-items: center; gap: 6px;">
+                <span style="width: 8px; height: 8px; background: #059669; border-radius: 50%; display: inline-block;"></span>
+                VIVADO VERIFIED
+              </span>
+            </div>
+          </div>
+        </div>
 
-        <!-- Project 2: UART Transceiver -->
+        <!-- Project 3: UART Transceiver -->
         <div class="project-card-brutal" id="project-uart">
           <div class="project-card-notch"></div>
           <div>
             <div class="project-top-meta">
               <span class="project-cat-badge">RTL Design &amp; Verification // 2026</span>
-              <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800;">[02]</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800;">[03]</span>
             </div>
             <h3 class="project-card-title">UART Transceiver – RTL Design &amp; Verification</h3>
             <p class="project-card-desc">
@@ -703,13 +630,13 @@
           </div>
         </div>
 
-        <!-- Project 3: Gesture Gloves -->
+        <!-- Project 4: Gesture Gloves -->
         <div class="project-card-brutal" id="project-gloves">
           <div class="project-card-notch"></div>
           <div>
             <div class="project-top-meta">
               <span class="project-cat-badge">Embedded Systems // Assistive</span>
-              <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800;">[03]</span>
+              <span style="font-family: var(--font-mono); font-size: 0.8rem; font-weight: 800;">[04]</span>
             </div>
             <h3 class="project-card-title">Hand Gesture Recognition Wearable</h3>
             <p class="project-card-desc">
@@ -745,7 +672,7 @@
 
       <div style="margin-top: 36px; display: flex; justify-content: flex-end;">
         <span style="font-family: var(--font-mono); font-size: 0.72rem; font-weight: 900; letter-spacing: 0.35em; text-transform: uppercase; color: rgba(0,0,0,0.35);">
-          Access_Silicon_Logs // V.03
+          Access_Silicon_Logs // V.04
         </span>
       </div>
     </div>
@@ -1147,7 +1074,6 @@
   </div>
 
   <!-- Scripts -->
-  <script src="js/alu-simulator.js"></script>
   <script src="js/contact.js"></script>
   <script src="js/main.js"></script>
 </body>

@@ -20,3 +20,5 @@ scratch/
 
 # Legacy backups
 _legacy/
+
+server.js

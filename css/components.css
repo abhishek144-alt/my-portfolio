@@ -1948,13 +1948,89 @@
   background: #dc2626;
 }
 
+.projects-slide-nav {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.projects-slide-hint {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+}
+
+.projects-nav-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-proj-arrow {
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  border: 3px solid #000000;
+  box-shadow: 4px 4px 0px #000000;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  color: #000000;
+}
+
+.btn-proj-arrow:hover {
+  background: #000000;
+  color: #ffffff;
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #000000;
+}
+
+.btn-proj-arrow:active {
+  transform: translate(4px, 4px);
+  box-shadow: 0px 0px 0px #000000;
+}
+
 .projects-cards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-  gap: 36px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 32px;
+  padding: 10px 4px 28px 4px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+.projects-cards-grid::-webkit-scrollbar {
+  height: 10px;
+}
+
+.projects-cards-grid::-webkit-scrollbar-track {
+  background: #ffffff;
+  border: 3px solid #000000;
+}
+
+.projects-cards-grid::-webkit-scrollbar-thumb {
+  background: #000000;
+  border: 1px solid #ffffff;
+}
+
+.projects-cards-grid::-webkit-scrollbar-thumb:hover {
+  background: #dc2626;
 }
 
 .project-card-brutal {
+  flex: 0 0 400px;
+  max-width: 86vw;
+  scroll-snap-align: start;
   border: 4px solid #000000;
   background: #ffffff;
   padding: 28px;
